@@ -6,16 +6,16 @@ import ru.home.homework.practice.units.Unit;
 
 public class MainApp {
     public static void main(String[] args) {
+        Hero hero = new Hero("Hero", 10);
+        Monster monster = new Monster("Monster", 5);
 
 
-        new Hero("Hero", 10);
-        new Monster("Monster", 5);
+        hero.info();
+        monster.info();
+        hero.attackEnemy(monster);
+        monster.info();
+        monster.attackEnemy(hero);
+        hero.info();
 
-        while(Hero.isAlive() && Monster.isAlive()) {
-            Hero.attackEnemy();
-            Hero.info();
-            Monster.attackEnemy();
-            Monster.info();
-        }
     }
 }
