@@ -9,14 +9,11 @@ public class MainApp {
         Hero hero = new Hero("Hero", 10);
         Monster monster = new Monster("Monster", 5);
 
-        while (true) {
+        do {
             hero.attackEnemy(monster);
             monster.info();
             monster.attackEnemy(hero);
             hero.info();
-            if (!(hero.isAlive()) || !(monster.isAlive())) {
-                break;
-            }
-        }
+        } while (hero.isAlive() && monster.isAlive());
     }
 }
